@@ -53,7 +53,7 @@
 
 5. Proceed to the deployment directory to deploy the containers
 
-  ```bash
+    ```bash
         # create the 3 deployment yaml file
         kubectl create -f js-api-deployment.yaml
         kubectl create -f python-api-deployment.yaml
