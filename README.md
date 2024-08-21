@@ -1,9 +1,11 @@
 ## DEV OPS
 
 ### Dockerization
-> Dockerfile
-> Containerized
-> Docker Engine
+
+    > Dockerfile
+    > Containerized
+    > Docker Engine
+
 
 ### Minikube 
 
