@@ -5,9 +5,9 @@
 2. Make sure that you copy the base64 of the configuration file and attach it to this secret yaml file.
 
   ```bash
-    #input the base64 confile file to dockerconfigjson
-    data:
-  .dockerconfigjson: dXNlcm5hbWU6cGFzc3dvcmQ=dXNlcm5hbWU6cGFzc3dvcmQ=dXNlcm5hbWU6cGFzc3dvcmQ=
+      #input the base64 confile file to dockerconfigjson
+      data:
+      .dockerconfigjson: dXNlcm5hbWU6cGFzc3dvcmQ=dXNlcm5hbWU6cGFzc3dvcmQ=dXNlcm5hbWU6cGFzc3dvcmQ=
     ```
 
 ---
