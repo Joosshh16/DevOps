@@ -1,0 +1,22 @@
+{
+  "name": "microservice-01",
+  "version": "1.0.0",
+  "description": "JS API",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Romar Cablao <rcablao@stratpoint.com>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.15"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "js",
+    "api",
+    "container"
+  ]
+}

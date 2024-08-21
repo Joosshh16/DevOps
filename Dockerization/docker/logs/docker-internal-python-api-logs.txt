@@ -1,0 +1,32 @@
+PS C:\Users\John Josua Ong\Desktop\milestone-01\docker\apps\webtool-nodejs> docker logs python-api
+ * Serving Flask app 'index'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.    
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3001
+ * Running on http://172.17.0.3:3001
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 134-537-658
+172.17.0.1 - - [31/Jul/2024 09:59:46] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [31/Jul/2024 09:59:47] "GET /favicon.ico HTTP/1.1" 404 -
+172.17.0.1 - - [31/Jul/2024 09:59:54] "GET /info HTTP/1.1" 200 -
+172.17.0.1 - - [31/Jul/2024 10:00:00] "GET /health HTTP/1.1" 200 -
+172.17.0.1 - - [31/Jul/2024 10:00:03] "GET /info HTTP/1.1" 200 -
+172.17.0.1 - - [31/Jul/2024 10:14:43] "GET /info HTTP/1.1" 200 -
+172.17.0.1 - - [31/Jul/2024 10:14:44] "GET /info HTTP/1.1" 200 -
+172.17.0.1 - - [31/Jul/2024 10:14:47] "GET /info HTTP/1.1" 200 -
+172.17.0.1 - - [31/Jul/2024 10:14:57] "GET /info HTTP/1.1" 200 -
+172.17.0.1 - - [31/Jul/2024 10:15:03] "GET /info HTTP/1.1" 200 -
+172.17.0.1 - - [31/Jul/2024 10:16:58] "GET /info HTTP/1.1" 200 -
+172.17.0.1 - - [31/Jul/2024 10:16:59] "GET /info HTTP/1.1" 200 -
+172.17.0.1 - - [31/Jul/2024 10:17:11] "GET /info HTTP/1.1" 200 -
+172.17.0.1 - - [31/Jul/2024 10:17:12] "GET /info HTTP/1.1" 200 -
+172.17.0.1 - - [31/Jul/2024 10:17:14] "GET /info HTTP/1.1" 200 -
+172.17.0.1 - - [31/Jul/2024 10:25:31] "GET /info HTTP/1.1" 200 -
+172.17.0.1 - - [31/Jul/2024 10:35:27] "GET /info HTTP/1.1" 200 -
+172.17.0.1 - - [31/Jul/2024 10:35:29] "GET /info HTTP/1.1" 200 -
+172.17.0.1 - - [31/Jul/2024 10:35:30] "GET /info HTTP/1.1" 200 -
+172.17.0.1 - - [31/Jul/2024 10:35:32] "GET /info HTTP/1.1" 200 -
+172.17.0.1 - - [31/Jul/2024 10:35:34] "GET /info HTTP/1.1" 200 -

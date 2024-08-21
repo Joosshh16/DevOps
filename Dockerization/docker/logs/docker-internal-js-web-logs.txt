@@ -1,0 +1,38 @@
+PS C:\Users\John Josua Ong\Desktop\milestone-01\docker\apps\webtool-nodejs> docker logs js-web
+
+> microservice-03@1.0.0 start /usr/src/app
+> nodemon index.js
+
+[nodemon] 2.0.15
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `node index.js`
+Server is listening on port 3002
+{ host: '821179a4dff1', language: 'python', version: '3.9.9' }
+{ host: '821179a4dff1', language: 'python', version: '3.9.9' }
+{ language: 'js', version: '14.18.0', host: 'b4bb6c6f5420' }
+{ host: '821179a4dff1', language: 'python', version: '3.9.9' }
+{ language: 'js', version: '14.18.0', host: 'b4bb6c6f5420' }
+{ host: '821179a4dff1', language: 'python', version: '3.9.9' }
+{ language: 'js', version: '14.18.0', host: 'b4bb6c6f5420' }
+{ host: '821179a4dff1', language: 'python', version: '3.9.9' }
+{ language: 'js', version: '14.18.0', host: 'b4bb6c6f5420' }
+{ host: '821179a4dff1', language: 'python', version: '3.9.9' }
+{ language: 'js', version: '14.18.0', host: 'b4bb6c6f5420' }
+{ host: '821179a4dff1', language: 'python', version: '3.9.9' }
+{ host: '821179a4dff1', language: 'python', version: '3.9.9' }
+{ host: '821179a4dff1', language: 'python', version: '3.9.9' }
+{ language: 'js', version: '14.18.0', host: 'b4bb6c6f5420' }
+{ host: '821179a4dff1', language: 'python', version: '3.9.9' }
+{ language: 'js', version: '14.18.0', host: 'b4bb6c6f5420' }
+{ host: '821179a4dff1', language: 'python', version: '3.9.9' }
+{ language: 'js', version: '14.18.0', host: 'b4bb6c6f5420' }
+{ host: '821179a4dff1', language: 'python', version: '3.9.9' }
+{ host: '821179a4dff1', language: 'python', version: '3.9.9' }
+{ host: '821179a4dff1', language: 'python', version: '3.9.9' }
+{ language: 'js', version: '14.18.0', host: 'b4bb6c6f5420' }
+{ host: '821179a4dff1', language: 'python', version: '3.9.9' }
+{ language: 'js', version: '14.18.0', host: 'b4bb6c6f5420' }
+{ host: '821179a4dff1', language: 'python', version: '3.9.9' }
+{ language: 'js', version: '14.18.0', host: 'b4bb6c6f5420' }

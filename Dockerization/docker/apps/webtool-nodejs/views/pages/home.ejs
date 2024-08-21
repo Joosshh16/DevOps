@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+
+<main>
+    <div class="jumbotron">
+      <a class="btn btn-light" href="?language=python" role="button" style="font-size: 20px;">
+        <img src="/images/python.png"  height="20"/>
+        Python
+      </a>
+      <a class="btn btn-light" href="?language=js" role="button" style="font-size: 20px;">
+        <img src="/images/js.png"  height="20"/>
+        Javascript
+      </a>
+      
+      <br/><br/>
+      
+      <p style="font-size: 15;">Host: <span class="badge badge-info" style="font-size: 20px;"><%= data.host %></span></p>
+      <p style="font-size: 15;">Language: <span class="badge badge-info" style="font-size: 20px;"><%= data.language %></span></p>
+      <p style="font-size: 15;">Version: <span class="badge badge-info" style="font-size: 20px;"><%= data.version %></span></p>
+    </div>
+</main>
+
+<footer>
+  <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
