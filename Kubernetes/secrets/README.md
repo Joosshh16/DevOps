@@ -2,7 +2,17 @@
 
 1. Secrets are used to store and handle sensitive information that cannot be seen in the frontend application. In this case, the sensitive information includes credentials for accessing containers from Docker Hub.
 
-2. Make sure that you copy the base64 of the configuration file and attach it to this secret yaml file.
+2. The YAML file type is Secret, and we name it docker-cred, attaching it to the microservice-app namespace.
+
+    ```bash
+        apiVersion: v1
+        kind: Secret
+        metadata:
+          name: docker-creds
+          namespace: microservice-app
+    ```
+
+3. Make sure that you copy the base64 of the configuration file and attach it to this secret yaml file.
 
     ```bash
       #input the base64 confile file to dockerconfigjson
