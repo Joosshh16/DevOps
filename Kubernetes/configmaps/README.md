@@ -23,8 +23,8 @@
 
     ```
 
-    ---
+---
 
 Go to the deployment directory to check the integration of the ConfigMaps."
 
-    ---
+---
