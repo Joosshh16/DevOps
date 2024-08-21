@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: js-web-deployment
+  namespace: microservice-app
+  labels:
+    app: microservices
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: js-web-pod
+  template:
+    metadata:
+      labels:
+        app: js-web-pod
+    spec:
+      containers:
+        - name: js-web-container
+          image: josua16/microservice:js-web-1.0
+          ports:
+            - containerPort: 3002
+          env:
+            - name: NODE_VERSION
+              valueFrom:
+                configMapKeyRef:
+                  name: js-config
+                  key: NODE_VERSION
+            - name: JS_API_ENDPOINT
+              valueFrom:
+                configMapKeyRef:
+                  name: js-config
+                  key: JS_API_ENDPOINT
+            - name: PYTHON_VERSION
+              valueFrom:
+                configMapKeyRef:
+                  name: js-config
+                  key: PYTHON_VERSION
+            - name: PYTHON_API_ENDPOINT
+              valueFrom:
+                configMapKeyRef:
+                  name: js-config
+                  key: PYTHON_API_ENDPOINT
+          resources:
+            requests:
+              memory: "250Mi"
+              cpu: "250m"
+            limits:
+              memory: "500Mi"
+              cpu: "500m"
+      imagePullSecrets:
+        - name: docker-creds
