@@ -102,3 +102,11 @@
 8. Verify if the output information are correct.
 
 ![list-pods](Kubernetes/screenshots/list-pods.png)
+![output-js](Kubernetes/screenshots/output-js.png)
+![output-python](Kubernetes/screenshots/output-python.png)
+
+---
+
+The containers are finally working and ready for deployment to the cloud.
+
+---
