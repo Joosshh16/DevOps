@@ -73,3 +73,32 @@
         # js-web-deployment-756f4bc776-48p8v      1/1     Running   0          2m53s
         # python-api-deployment-d9b864c9f-pmrcg   1/1     Running   0          3m4s
     ```
+
+6. Now expose it as a service, go to service directory and create the service yaml files.
+
+    ```bash
+        # create the 3 service yaml file
+        kubectl create -f service-js-api.yaml
+        kubectl create -f service-python-deployment.yaml
+        kubectl create -f service-js-web.yaml
+
+        # verify if the service yaml files is successfully created, declare also the namespace where we deploy it
+        kubect get services -n microservice-app
+        # NAME                 TYPE       CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
+        # js-api-service       NodePort   10.105.166.47    <none>        80:32007/TCP   91s
+        # js-web-service       NodePort   10.105.97.56     <none>        80:32005/TCP   81s
+        # python-api-service   NodePort   10.111.170.113   <none>        80:32006/TCP   72s
+    ```
+
+7. Run the services to access through your browser.
+
+    ```bash
+        # start the minikube services to access the pods
+        minikube services js-api-service js-web-service python-api-service
+
+        # go to the IP of js-web-service to check the output through the browsers
+    ```
+
+8. Verify if the output information are correct.
+
+![list-pods](Kubernetes/screenshots/list-pods.png)
