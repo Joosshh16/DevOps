@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: js-config
+  namespace: microservice-app
+data:
+  NODE_VERSION: "14.18.0"
+  JS_API_ENDPOINT: "http://js-api-service:80/info"
+  PYTHON_VERSION: "3.9.9"
+  PYTHON_API_ENDPOINT: "http://python-api-service:80/info"
