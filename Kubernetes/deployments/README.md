@@ -1,6 +1,6 @@
 ## Deployment Yaml File
 
-1. In this project, we have three containers that will run
+1. In this project, we have three containers that will run.
 > js-api      
 > python-api     
 > js-web      
@@ -56,7 +56,7 @@
         - name: docker-creds
      ```
 
-6. Additionally, in js-web-deployment, we use ConfigMaps to serve as environment variables for retrieving the values of the APIs
+6. Additionally, in js-web-deployment, we use ConfigMaps to serve as environment variables for retrieving the values of the APIs.
 
       ```bash
         env:
@@ -71,8 +71,8 @@
                   name: js-config
                   key: JS_API_ENDPOINT
      ```
-      ---
+---
 
-The deployment YAML files are complete for deploying these containers. To expose these containers, go to the services directory
+The deployment YAML files are complete for deploying these containers. To expose these containers, go to the services directory.
 
-    ---
+---
