@@ -105,7 +105,7 @@
 ![output-js](screenshots/output-js.png)
 ![output-python](screenshots/output-python.png)
 
-9. Additionally you
+9. Additionally, you can use these manifest files to deploy these applications to the cloud.
 
 ---
 
