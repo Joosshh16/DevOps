@@ -101,9 +101,9 @@
 
 8. Verify if the output information are correct.
 
-![list-pods](Kubernetes/screenshots/list-pods.png)
-![output-js](Kubernetes/screenshots/output-js.png)
-![output-python](Kubernetes/screenshots/output-python.png)
+![list-pods](screenshots/list-pods.png)
+![output-js](screenshots/output-js.png)
+![output-python](screenshots/output-python.png)
 
 9. Additionally you
 
