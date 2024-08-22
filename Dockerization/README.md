@@ -8,7 +8,7 @@ To create these containers, refer to the README file in each folder for instruct
 
 1. js-api = docker -> apps -> api-nodejs
 2. python-api = docker -> apps -> api-python
-3. js-web = docker -> apps-> webtool-nodejs
+3. web = docker -> apps-> webtool-nodejs
 
 Before starting the integration process, we will stop and remove the running containers.
 
@@ -16,7 +16,7 @@ Running containers.
 
 > 1. js-api 
 > 2. python-api 
-> 3. js-web 
+> 3. web 
 
 Clean up the environment by stopping and removing running containers.
 
