@@ -174,12 +174,12 @@ Clean up the environment by stopping and removing running containers.
 ### Webtool fetching data from the JS API
 
 ![dockernetwork-result-js](screenshots/docker-network-js.png)
-![dockernetwork-webresult-js](screenshots/docker-network-webtool-checkjs.png)
+![dockernetwork-webresult-js](screenshots/docker-network-webtool-checkjsapi.png)
 
 ### Webtool fetching data from Python-api
 
 ![dockernetwork-result-python](screenshots/docker-network-python.png)
-![dockernetwork-webresult-python](screenshots/docker-network-webtool-checkpy.png)
+![dockernetwork-webresult-python](screenshots/docker-network-webtool-checkpyapi.png)
 
 6. Lastly, you can check the logs of all the containers.
 
