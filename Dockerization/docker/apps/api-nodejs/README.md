@@ -10,14 +10,14 @@
     cat "C:\Users\John Josua Ong\.ssh\id_rsa.pub"
 
     # clone milestone projects using SSH, input passphrase when prompted to complete the process
-    git clone git@gitlab.stratpoint.cloud:stratpoint-cloud-native/bootcamp-resources/foundational/milestone-project.git
+    git clone git@gitlab.<yourgitlink>.git
     ```
 
 2. Explore the activity 1 JS API directory.
 
     ```bash
     # change directory
-    cd milestone-01/activity-01
+    cd api-nodejs
 
     # list and check the files within the JS API folder
     ls
@@ -34,9 +34,9 @@
 
     # adding label
     LABEL name ="JS API"\
-        description ="For backend API"\
-        authors="johnjosua.ong@stratpoint.com" \
-        company="Stratpoint Technologies"
+        description ="Backend API"\
+        authors="<email>" \
+        company="Companty/Orgname"
     
     # setup app directory
     WORKDIR /usr/src/app
@@ -115,7 +115,7 @@
     > c. Info Path - http://{ip}:{port}/info  
 
 ### RESULT
-![js-api-result-localhost](docker/screenshots/JS-API-curl-localhost.png)
+![js-api-result-localhost](apps/screenshots/JS-API-curl-localhost.png)
 ![js-api-result-health](docker/screenshots/JS-API-curl-localhost-health.png)
 ![js-api-result-info](docker/screenshots/JS-API-curl-localhost-info.png)
 
