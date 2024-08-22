@@ -1,10 +1,10 @@
 {
     "auths": {
       "https://index.docker.io/v1/": {
-        "username": "ongjohnjosua@gmail.com",
-        "password": "josuaongako123",
-        "email": "ongjohnjosua@gmail.com",
-        "auth": "b25nam9obmpvc3VhQGdtYWlsLmNvbTpqb3N1YW9uZ2FrbzEyMw=="
+        "username": "user",
+        "password": "userpass",
+        "email": "user email",
+        "auth": "b25awdawd123123"
       }
     }
   }
