@@ -104,13 +104,13 @@
     > c. Info Path - http://{ip}:{port}/info  
 
 ### RESULT
-![python-api-result-localhost](docker/screenshots/Python-API-curl-localhost.png)
-![python-api-result-health](docker/screenshots/Python-API-curl-localhost-health.png)
-![python-api-result-info](docker/screenshots/Python-API-curl-localhost-info.png)
+![python-api-result-localhost](screenshots/Python-API-curl-localhost.png)
+![python-api-result-health](screenshots/Python-API-curl-localhost-health.png)
+![python-api-result-info](screenshots/Python-API-curl-localhost-info.png)
 
-![python-api-webresult-localhost](docker/screenshots/Python-API-web-localhost.png)
-![python-api-webresult-health](docker/screenshots/Python-API-web-localhost-health.png)
-![python-api-webresult-info](docker/screenshots/Python-API-web-localhost-info.png)
+![python-api-webresult-localhost](screenshots/Python-API-web-localhost.png)
+![python-api-webresult-health](screenshots/Python-API-web-localhost-health.png)
+![python-api-webresult-info](screenshots/Python-API-web-localhost-info.png)
 
 ---
 
