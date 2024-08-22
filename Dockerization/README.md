@@ -101,7 +101,7 @@ Clean up the environment by stopping and removing running containers.
 ### Webtool fetching data from Python-api
 
 ![dockerinternal-result-py](screenshots/docker-internal-python.png)
-![dockerinternal-webresult-py](screenshots/docker-internal-webtool-checkpy.png)
+![dockerinternal-webresult-py](screenshots/docker-internal-webtool-checkpyapi.png)
  
 4. Lastly, you can check the logs of all the containers.
 
