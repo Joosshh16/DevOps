@@ -1,6 +1,6 @@
 ## JS API
 
-1. Clone and explore the Milestone 1 project. I generated an SSH key on my device and integrated it to my Git account for secure connection.
+1. Clone and explore the project. I generated an SSH key on my device and integrated it to my Git account for secure connection.
 
     ```bash
     # generate an SSH key and input passphrase for added security
@@ -10,10 +10,10 @@
     cat "C:\Users\path\.ssh\id_rsa.pub"
 
     # clone milestone projects using SSH, input passphrase when prompted to complete the process
-    git clone git@gitlab.<yourgitlink>.git
+    git clone git@<yourgitlink>.git
     ```
 
-2. Explore the activity 1 JS API directory.
+2. Explore the JS API directory.
 
     ```bash
     # change directory
@@ -27,7 +27,7 @@
     # package-lock.json     - other packages and dependencies
     ```
 
-3. To build the JS API container image, I created Dockerfile inside the activity 1 directory and implement some best practices in building container image.
+3. To build the JS API container image, I created Dockerfile inside the directory and implement some best practices in building container image.
 
     ```Dockerfile
     FROM node:14.18.0-slim
@@ -36,7 +36,7 @@
     LABEL name ="JS API"\
         description ="Backend API"\
         authors="<email>" \
-        company="Companty/Orgname"
+        company="Company/Orgname"
     
     # setup app directory
     WORKDIR /usr/src/app
