@@ -7,7 +7,7 @@
     ssh-keygen
 
     # copy the public key and add it to my GitLab account
-    cat "C:\Users\John Josua Ong\.ssh\id_rsa.pub"
+    cat "C:\Users\path\.ssh\id_rsa.pub"
 
     # clone milestone projects using SSH, input passphrase when prompted to complete the process
     git clone git@gitlab.<yourgitlink>.git
@@ -115,7 +115,7 @@
     > c. Info Path - http://{ip}:{port}/info  
 
 ### RESULT
-![js-api-result-localhost](apps/screenshots/JS-API-curl-localhost.png)
+![js-api-result-localhost](screenshots/JS-API-curl-localhost.png)
 ![js-api-result-health](docker/screenshots/JS-API-curl-localhost-health.png)
 ![js-api-result-info](docker/screenshots/JS-API-curl-localhost-info.png)
 
