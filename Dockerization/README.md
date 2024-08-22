@@ -95,13 +95,13 @@ Clean up the environment by stopping and removing running containers.
 3. Test and access the webtool through a web browser.
 ### Webtool fetching data from the JS API
 
-![dockerinternal-result-js](docker/screenshots/docker-internal-js.png)
-![dockerinternal-webresult-jsh](docker/screenshots/docker-internal-webtool-checkjs.png)
+![dockerinternal-result-js](screenshots/docker-internal-js.png)
+![dockerinternal-webresult-jsh](screenshots/docker-internal-webtool-checkjs.png)
 
 ### Webtool fetching data from Python-api
 
-![dockerinternal-result-py](docker/screenshots/docker-internal-python.png)
-![dockerinternal-webresult-py](docker/screenshots/docker-internal-webtool-checkpy.png)
+![dockerinternal-result-py](screenshots/docker-internal-python.png)
+![dockerinternal-webresult-py](screenshots/docker-internal-webtool-checkpy.png)
  
 4. Lastly, you can check the logs of all the containers.
 
@@ -115,9 +115,9 @@ Clean up the environment by stopping and removing running containers.
     # check logs for js-web
     docker logs js-web
     ```
-![dockerinternal-logs-result-js](docker/screenshots/docker-internal-logs-js-api.png)
-![dockerinternal-logs-result-python](docker/screenshots/docker-internal-logs-python-api.png)
-![dockerinternal-logs-result-webtool](docker/screenshots/docker-internal-logs-js-web.png)
+![dockerinternal-logs-result-js](screenshots/docker-internal-logs-js-api.png)
+![dockerinternal-logs-result-python](screenshots/docker-internal-logs-python-api.png)
+![dockerinternal-logs-result-webtool](screenshots/docker-internal-logs-js-web.png)
 
 
 ### Using Docker networks to link containers
@@ -173,13 +173,13 @@ Clean up the environment by stopping and removing running containers.
 
 ### Webtool fetching data from the JS API
 
-![dockernetwork-result-js](docker/screenshots/docker-network-js.png)
-![dockernetwork-webresult-js](docker/screenshots/docker-network-webtool-checkjs.png)
+![dockernetwork-result-js](screenshots/docker-network-js.png)
+![dockernetwork-webresult-js](screenshots/docker-network-webtool-checkjs.png)
 
 ### Webtool fetching data from Python-api
 
-![dockernetwork-result-python](docker/screenshots/docker-network-python.png)
-![dockernetwork-webresult-python](docker/screenshots/docker-network-webtool-checkpy.png)
+![dockernetwork-result-python](screenshots/docker-network-python.png)
+![dockernetwork-webresult-python](screenshots/docker-network-webtool-checkpy.png)
 
 6. Lastly, you can check the logs of all the containers.
 
@@ -193,9 +193,9 @@ Clean up the environment by stopping and removing running containers.
     # check logs for js-web
     docker logs js-web
     ```
-![dockernetwork-logs-result-js](docker/screenshots/docker-network-logs-jsapi.png)
-![dockernetwork-logs-result-python](docker/screenshots/docker-network-logs-pythonapi.png)
-![dockernetwork-logs-result-webtool](docker/screenshots/docker-network-logs-jsweb.png)
+![dockernetwork-logs-result-js](screenshots/docker-network-logs-jsapi.png)
+![dockernetwork-logs-result-python](screenshots/docker-network-logs-pythonapi.png)
+![dockernetwork-logs-result-webtool](screenshots/docker-network-logs-jsweb.png)
 
 
 ---
