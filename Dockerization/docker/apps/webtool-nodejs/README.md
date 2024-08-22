@@ -88,9 +88,9 @@
     ```
 
 ### RESULT
-![webtool-result-localhost](docker/screenshots/Webtool-curl-localhost.png)
+![webtool-result-localhost](screenshots/Webtool-curl-localhost.png)
 
-![webtool-webresult-localhost](docker/screenshots/Webtool-web-localhost.png)
+![webtool-webresult-localhost](screenshots/Webtool-web-localhost.png)
 
 ---
 
