@@ -2,11 +2,11 @@
 
 1. We don't need to clone the project since we already clone it using SSH with the previous steps.
 
-2. Explore the activity 2 Python API directory.
+2. Explore the Python API directory.
 
     ```bash
     # change directory
-    cd milestone-01/activity-02
+    cd python-api
 
     # list and check the files within the Python API folder
     ls
@@ -14,16 +14,16 @@
     # requirement.txt       - packages and dependencies
     ```
 
-3. To build the Python API container image, I created Dockerfile inside the activity 2 directory and implement some best practices in building container image.
+3. To build the Python API container image, I created Dockerfile inside the directory and implement some best practices in building container image.
 
     ```Dockerfile
     FROM python:3.9.9-slim
 
     # adding label
     LABEL name ="Python API"\
-        description ="For backend API"\
-        authors="johnjosua.ong@stratpoint.com" \
-        company="Stratpoint Technologies"
+        description ="Backend API"\
+        authors="email" \
+        company="Company/Orgname"
 
     # setup app directory
     WORKDIR /app
