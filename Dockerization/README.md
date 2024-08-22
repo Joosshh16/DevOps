@@ -96,7 +96,7 @@ Clean up the environment by stopping and removing running containers.
 ### Webtool fetching data from the JS API
 
 ![dockerinternal-result-js](screenshots/docker-internal-js.png)
-![dockerinternal-webresult-jsh](screenshots/docker-internal-webtool-checkjs.png)
+![dockerinternal-webresult-jsh](screenshots/docker-internal-webtool-checkjsapi.png)
 
 ### Webtool fetching data from Python-api
 
