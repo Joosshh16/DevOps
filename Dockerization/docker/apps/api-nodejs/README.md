@@ -116,12 +116,12 @@
 
 ### RESULT
 ![js-api-result-localhost](screenshots/JS-API-curl-localhost-health.png)
-![js-api-result-health](docker/screenshots/JS-API-curl-localhost-health.png)
-![js-api-result-info](docker/screenshots/JS-API-curl-localhost-info.png)
+![js-api-result-health](screenshots/JS-API-curl-localhost-health.png)
+![js-api-result-info](screenshots/JS-API-curl-localhost-info.png)
 
-![js-api-webresult-localhost](docker/screenshots/JS-API-web-localhost.png)
-![js-api-webresult-health](docker/screenshots/JS-API-web-localhost-health.png)
-![js-api-webresult-info](docker/screenshots/JS-API-web-localhost-info.png)
+![js-api-webresult-localhost](screenshots/JS-API-web-localhost.png)
+![js-api-webresult-health](screenshots/JS-API-web-localhost-health.png)
+![js-api-webresult-info](screenshots/JS-API-web-localhost-info.png)
 
 ---
 
