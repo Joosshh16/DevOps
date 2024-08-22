@@ -2,10 +2,10 @@
 
 1. We don't need to clone the project since we already clone it using SSH with the previous steps.
 
-2. Explore the activity 3 Webtool directory.
+2. Explore the activity web directory.
     ```bash
     # change directory
-    cd milestone-01/activity-03
+    cd web-directory
 
     # list and check the files within the Python API folder
     ls
@@ -17,16 +17,16 @@
     # package-lock.json     - other packages and dependencies
     ```
 
-3. To build the Webtool container image, I created Dockerfile inside the activity 3 directory and implement some best practices in building container image.
+3. To build the Web container image, I created Dockerfile inside the directory and implement some best practices in building container image.
 
     ```Dockerfile
     FROM node:14.18.0-slim
 
     # adding label
-    LABEL name ="Webtool"\
-        description ="Front web application"\
-        authors="johnjosua.ong@stratpoint.com" \
-        company="Stratpoint Technologies"
+    LABEL name ="Web"\
+        description ="FrontEnd"\
+        authors="email" \
+        company="Company/Orgname"
 
     # setup app directory
     WORKDIR /usr/src/app
@@ -50,7 +50,7 @@
     CMD [ "npm", "run", "start" ]
     ```
 
-4. Build the Webtool container image using the newly created Dockerfile
+4. Build the Web container image using the newly created Dockerfile
 
     ```bash
     # build image
@@ -62,7 +62,7 @@
     # microservice-js-web                                                            1.0       ddc08371b608   19 hours ago   174MB
     ```
 
-5. Run a Webtool container using the image that just built.
+5. Run a Web container using the image that just built.
 
     ```bash
     # run the Python API container
@@ -94,6 +94,6 @@
 
 ---
 
-The Webtool container is running, but it cannot connect to the backend APIs (JS and Python). Please refer to the root directory's README.md file for application integration instructions.
+The Web container is running, but it cannot connect to the backend APIs (JS and Python). Please refer to the root directory's README.md file for application integration instructions.
 
 ---
