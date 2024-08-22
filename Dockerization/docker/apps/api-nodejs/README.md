@@ -115,7 +115,7 @@
     > c. Info Path - http://{ip}:{port}/info  
 
 ### RESULT
-![js-api-result-localhost](Dockerization/docker/screenshots/JS-API-curl-localhost.png)
+![js-api-result-localhost](.../screenshots/JS-API-curl-localhost.png)
 ![js-api-result-health](docker/screenshots/JS-API-curl-localhost-health.png)
 ![js-api-result-info](docker/screenshots/JS-API-curl-localhost-info.png)
 
