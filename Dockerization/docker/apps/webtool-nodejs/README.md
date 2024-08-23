@@ -22,6 +22,7 @@ setup
 Clone and explore the project. If you have your own repository you can use SSH key and integrated it your Git account for secure connection.
 
     ```bash
+    # change directory
     # clone docker projects
     git clone git@<gitlink>.git
     ```
