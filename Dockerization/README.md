@@ -6,7 +6,8 @@ This project has containerized system designed to deliver a seamless user experi
 - [Python-API](./docker/apps/python-api)
 - [Web-frontend](./docker/apps/web-front)
 
--Table of contents
+## Table of Contents
+* [Setup](#setup)
 Architecture
 Functionalities
 Requirements
