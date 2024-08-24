@@ -13,7 +13,8 @@ This project has containerized system designed to deliver a seamless user experi
     * [Nodejs-API](#nodejs-api)
     * [Python-API](#python-api)
     * [Web-Front](#web-front-end)
-    integration of containers
+    * [Containers Integration](#container-integration)
+* [Key Takeways](#key-takeways)
 
 ## Requirements
 
