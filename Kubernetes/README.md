@@ -1,5 +1,7 @@
 # Microservices
-This project utilizes a microservices architecture, deploying containerized applications within a Minikube Kubernetes cluster. Kubernetes manifests orchestrate the deployment of each Pods, ensuring seamless delivery to user
+This project utilizes a microservices architecture, deploying containerized applications within a Minikube Kubernetes cluster. Kubernetes manifests orchestrate the deployment of each Pods, ensuring seamless delivery to user.
+
+This guide also includes instructions for deploying the microservices application to cloud platforms.
 
 # Project Directory
 Refer to this directory for guidance on container setup with manifest files.
