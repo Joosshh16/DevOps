@@ -1,3 +1,13 @@
+# Microservices
+This project utilizes a microservices architecture, deploying containerized applications within a Minikube Kubernetes cluster. Kubernetes manifests orchestrate the deployment of each Pods, ensuring seamless delivery to user
+
+# Project Directory
+Refer to this directory for guidance on container setup with manifest files.
+
+- [Config-json = for the container registry credentials](./config-json)
+- [Python-API](./docker/apps/python-api)
+- [Web-frontend](./docker/apps/web-front)
+
 # Integrations
 
 ![Minikube Architecture](architecture/Minikube-Architecture.png)
