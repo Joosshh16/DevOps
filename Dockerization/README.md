@@ -7,15 +7,30 @@ This project has containerized system designed to deliver a seamless user experi
 - [Web-frontend](./docker/apps/web-front)
 
 ## Table of Contents
+* Architecture and Functionalities
+* Requirements
 * [Setup](#setup)
-Architecture
-Functionalities
 Requirements
 setup
     nodejs-api
     python-api
     web-frontend
     integration of containers
+
+## Requirements
+
+1. Download and install Docker Desktop or a compatible virtualization software to enable Dockerized applications.
+- [Docker Desktop](https://docs.docker.com/desktop/install/mac-install/)
+- [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
+    After installing Docker Desktop, Docker will be automatically available within the application. If you prefer VirtualBox, follow these [instructions](https://medium.com/@abhi.in/how-to-install-docker-on-local-virtual-machine-caa7979f60b4) to install Docker on your local virtual machine.
+
+2. Feel free to use any coding IDE you prefer. In this project, I used [Visual Studio Code](https://code.visualstudio.com/download).
+
+3. Make sure that the docker engine working in your environment to check use this code.
+
+    ```
+    docker --version
+    ```
 
 ## Setup
 
