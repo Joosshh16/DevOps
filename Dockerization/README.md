@@ -14,7 +14,7 @@ This project has containerized system designed to deliver a seamless user experi
     * [Python-API](#python-api)
     * [Web-Front](#web-front-end)
     * [Containers Integration](#container-integration)
-* [Key Takeways](#key-takeways)
+* [Key Takeways ann Conclusio](#key-takeways-and-conclusions)
 
 ## Architecture and Functionalities
 
@@ -305,7 +305,7 @@ Clone and explore the project. If you have your own repository you can use SSH k
     ```
 
 ---
-### Key takeways
+### Key takeways and Conclusions
 
 1. To create optimized Docker images, implement best practices.
 
