@@ -1,10 +1,10 @@
--Title
-project and description
+# Docker API
+This project has containerized system designed to deliver a seamless user experience. APIs facilitate data flow between the backend applications and the frontend web interface.
 
---Project Directoru
--nodejs-api
--python-api
--web-frontend
+# Project Directory
+- [Nodejs-API] (./node-jsapi)
+- [Python-API] (./python-api)
+- [Web-frontend] (./web-front)
 
 -Table of contents
 Architecture
