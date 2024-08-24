@@ -15,8 +15,7 @@ Refer to this directory for guidance on container setup with manifest files.
 * [Requirements](#requirements)
 * [Microservices Deployment](#microservices-deployment)
 * [Cloud Deployment](#cloud-deployment)
-
-
+* [Key Takeaways and Conclusions](#key-takeways-and-conclusions)
 
 ## Architecture and Funtionalities
 
