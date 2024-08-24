@@ -22,7 +22,8 @@ setup
 1. Download and install Docker Desktop or a compatible virtualization software to enable Dockerized applications.
 - [Docker Desktop](https://docs.docker.com/desktop/install/mac-install/)
 - [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
-    After installing Docker Desktop, Docker will be automatically available within the application. If you prefer VirtualBox, follow these [instructions](https://medium.com/@abhi.in/how-to-install-docker-on-local-virtual-machine-caa7979f60b4) to install Docker on your local virtual machine.
+    
+After installing Docker Desktop, Docker will be automatically available within the application. If you prefer VirtualBox, follow these [instructions](https://medium.com/@abhi.in/how-to-install-docker-on-local-virtual-machine-caa7979f60b4) to install Docker on your local virtual machine.
 
 2. Feel free to use any coding IDE you prefer. In this project, I used [Visual Studio Code](https://code.visualstudio.com/download).
 
@@ -31,6 +32,7 @@ setup
     ```
     docker --version
     ```
+
 
 ## Setup
 
