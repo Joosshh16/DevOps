@@ -32,7 +32,18 @@ As illustrated in the architecture diagram, the containerized images are deploye
 
 1. You can refer to the requirements of [previous project](/Dockerization) for initial setup. 
 
-2. For added setup you need to install minukube as local cluster in your device.
+2. For additional configuration, install Minikube to create a local Kubernetes cluster.
+    * [How to install minikube in Docker Desktop](https://minikube.sigs.k8s.io/docs/tutorials/docker_desktop_replacement/)
+    * [How to install minikube in VirtualBox](https://minikube.sigs.k8s.io/docs/drivers/virtualbox/)
+
+3. To deploy your application, push your local container images to a container registry. Create a [Docker Hub account](https://hub.docker.com/) if you don't have one already
+    
+    ```
+    # tag the image
+    docker tag <image1> registry/image1:v1
+    # push the image to Docker Hub
+    docker push registry/image1:v1
+    ```
 
 
 
