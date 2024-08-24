@@ -241,8 +241,8 @@ Clone and explore the project. If you have your own repository you can use SSH k
     # verify the containers that were just created.
     docker ps
     # CONTAINER ID   IMAGE                         COMMAND                  CREATED          STATUS          PORTS      NAMES
-    # 532f056fb1d9   microservice-python-api:v.0   "python index.py"        2 seconds ago    Up 1 second     3001/tcp   python-api
-    # 532f056fb1d9   microservice-python-api:v.0   "python index.py"        2 seconds ago    Up 1 second     3001/tcp   python-api
+    # 532f056fb1d9   microservice-python-api:v.1   "python index.py"        2 seconds ago    Up 1 second     3001/tcp   python-api
+    # 532f056fb1d9   microservice-python-api:v.1   "python index.py"        2 seconds ago    Up 1 second     3001/tcp   python-api
     ```
 4. Run the webtool container and expose it to port 80 for web browser access. Pass in two environment variables (JS_API_ENDPOINT and PYTHON_API_ENDPOINT), using the container's name instead of localhost or host.docker.internal.
 
@@ -272,7 +272,7 @@ Clone and explore the project. If you have your own repository you can use SSH k
     # check logs for js-web
     docker logs js-web
     ```
-    
+
 ---
 ### Key takeways
 
@@ -296,7 +296,7 @@ Clone and explore the project. If you have your own repository you can use SSH k
 
 4. Store the systems in a repository for backup, recovery, and future improvements.
 
-> a. This project uses GitLab for version control and as a repository.  
+> a. This project uses GitLab/Github for version control and as a repository.  
 > b. Can be improved through automated builds and deployments.  
 
 ---
