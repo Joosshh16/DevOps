@@ -305,6 +305,7 @@ Clone and explore the project. If you have your own repository you can use SSH k
     ```
 
 ---
+
 ### Key takeways and Conclusions
 
 1. To create optimized Docker images, implement best practices.
