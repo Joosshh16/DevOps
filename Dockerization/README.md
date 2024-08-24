@@ -16,6 +16,10 @@ This project has containerized system designed to deliver a seamless user experi
     * [Containers Integration](#container-integration)
 * [Key Takeways](#key-takeways)
 
+## Architecture and Functionalities
+
+![Docker Architecture](architecture/Docker-Architecture.png)
+
 ## Requirements
 
 1. Download and install Docker Desktop or a compatible virtualization software to enable Dockerized applications.
