@@ -90,7 +90,7 @@
         # python-api-service   NodePort   10.111.170.113   <none>        80:32006/TCP   72s
     ```
 
-7. Run the services to access through your browser.
+7. Run the services to access through your browser and verify if the output information are correct.
 
     ```bash
         # start the minikube services to access the pods
@@ -98,13 +98,7 @@
 
         # go to the IP of js-web-service to check the output through the browsers
     ```
-
-8. Verify if the output information are correct.
-
-![list-pods](screenshots/list-pods.png)
-![output-js](screenshots/output-js.png)
-![output-python](screenshots/output-python.png)
-
+    
 9. Additionally, you can use these manifest files to deploy these applications to the cloud.
 
 ---
