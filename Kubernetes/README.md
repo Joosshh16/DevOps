@@ -30,7 +30,7 @@ As illustrated in the architecture diagram, the containerized images are deploye
 
 ## Requirements
 
-1. You can refer to the requirements of [previous project](./Dockerization) for initial setup. 
+1. You can refer to the requirements of [previous project](/Dockerization) for initial setup. 
 
 2. For added setup you need to install minukube as local cluster in your device.
 
