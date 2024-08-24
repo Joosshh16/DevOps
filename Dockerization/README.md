@@ -273,7 +273,7 @@ Clone and explore the project. If you have your own repository you can use SSH k
     docker ps
     # CONTAINER ID   IMAGE                         COMMAND                  CREATED          STATUS          PORTS      NAMES
     # 532f056fb1d9   microservice-python-api:v.1   "python index.py"        2 seconds ago    Up 1 second     3001/tcp   python-api
-    # 532f056fb1d9   microservice-python-api:v.1   "python index.py"        2 seconds ago    Up 1 second     3001/tcp   python-api
+    # 532f056fb1d9   microservice-js-api:1.0       "docker-entrypoint.s…"        2 seconds ago    Up 1 second     3001/tcp   python-api
     ```
 4. Run the webtool container and expose it to port 80 for web browser access. Pass in two environment variables (JS_API_ENDPOINT and PYTHON_API_ENDPOINT), using the container's name instead of localhost or host.docker.internal.
 
