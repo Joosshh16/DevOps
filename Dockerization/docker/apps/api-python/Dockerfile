@@ -3,8 +3,8 @@ FROM python:3.9.9-slim
 # adding label
 LABEL name ="Python API"\
     description ="For backend API"\
-    authors="johnjosua.ong@stratpoint.com" \
-    company="Stratpoint Technologies"
+    authors="Email" \
+    company="Company"
 
 # setup app directory
 WORKDIR /app

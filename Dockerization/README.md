@@ -1,126 +1,215 @@
-## Integration
+-Title
+project and description
 
-### For this process, we will integrate the webtool container with the backend APIs (JS and Python) using two options.
-> a. Using host docker internal     
-> b. Using docker network   
+--Project Directoru
+-nodejs-api
+-python-api
+-web-frontend
 
-To create these containers, refer to the README file in each folder for instructions.
+-Table of contents
+Architecture
+Functionalities
+Requirements
+setup
+    nodejs-api
+    python-api
+    web-frontend
+    integration of containers
 
-1. js-api = docker -> apps -> api-nodejs
-2. python-api = docker -> apps -> api-python
-3. web = docker -> apps-> webtool-nodejs
+## Setup
 
-Before starting the integration process, we will stop and remove the running containers.
+Clone and explore the project. If you have your own repository you can use SSH key and integrated it your Git account for secure connection.
 
-Running containers.
+    ```bash
+    # clone docker projects
+    git clone git@<gitlink>.git
+    ```
 
-> 1. js-api 
-> 2. python-api 
-> 3. web 
+### Nodejs-API
+1. Explore the JS API directory.
 
-Clean up the environment by stopping and removing running containers.
+    ```bash
+    # change directory
+    cd nodejs-api
 
-    
+    # list and check the files within the JS API folder
+    ls
+    # .dockerignore         - used to exclude files and directories
+    # index.js              - entrypoint of the code
+    # package.json          - nodejs metadata, includes libraries and other info
+    # package-lock.json     - other packages and dependencies
+    ```
+
+2. Use Dockerfile to build the JS-API container image.
+
+    ```bash
+    # build image
+    docker build -t js-api:v1 .
+
+    # list images to view the js-api image
+    docker image ls
+    # REPOSITORY                    TAG              IMAGE ID       CREATED         SIZE
+    # js-api                        v1               1e73c6e65a6d   7 minutes ago   173MB
+    ```
+
+3. Run a JS API container using the image that just built.
+
+    ```bash
+    # run the JS API container
+    docker run -d -p 80:3000 --name microservice-jsapi js-api:v1
+    # -d                        # detached mode
+    # -p 80:3000                # mapping ports - local port:container port
+    # --name microservice-jsapi # set name of container
+    # js-api:v1                 # image name and tag
+
     # list running containers
     docker ps
-    # CONTAINER ID   IMAGE                         COMMAND                  CREATED       STATUS          PORTS                    NAMES
-    # 588aea699a87   microservice-js-web:1.0       "docker-entrypoint.s…"   2 hours ago   Up 7 minutes   0.0.0.0:3002->3002/tcp   js-web
-    # 260d91419727   microservice-python-api:1.0   "python index.py"        3 hours ago   Up 7 minutes   0.0.0.0:8080->3001/tcp   python-api
-    # 147377406caa   microservice-js-api:1.0       "docker-entrypoint.s…"   6 hours ago   Up 7 minutes   0.0.0.0:80->3000/tcp     js-api
-
-    # stop the running containers listed above
-    docker stop js-api
-    docker stop python-api
-    docker stop js-web
-
-    # you can verify if the containers have stopped by running this code and checking if the status shows "exited
-    docker ps -a
-    # CONTAINER ID   IMAGE                         COMMAND                  CREATED       STATUS                          PORTS     NAMES
-    # 588aea699a87   microservice-js-web:1.0       "docker-entrypoint.s…"   2 hours ago   Exited (0) 57 seconds ago                 js-web
-    # 260d91419727   microservice-python-api:1.0   "python index.py"        3 hours ago   Exited (0) About a minute ago             python-api
-    # 147377406caa   microservice-js-api:1.0       "docker-entrypoint.s…"   6 hours ago   Exited (0) 2 minutes ago                  js-api 
-
-    # removed the stopped containers listed above
-    docker rm js-api
-    docker rm python-api
-    docker rm js-web
-
-    # verify that the containers have been terminated successfully
-    docker ps -a
-    # CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+    # CONTAINER ID   IMAGE       COMMAND                  CREATED              STATUS              PORTS                  NAMES
+    # 665839ec9f05   js-api:v1   "docker-entrypoint.s…"   About a minute ago   Up About a minute   0.0.0.0:80->3000/tcp   microservice-jsapi
     ```
 
-### Using host docker internal
-
-1. Exposing the backend container's port.
+4. Test and access the API via command line and browser.
 
     ```bash
-    # run and expose js-api to port 8081
-    docker run -d -p 8081:3000 --name js-api microservice-js-api:1.0
-    # -d                        # detached mode
-    # -p 8081 :3000             # mapping ports - local port:container port
-    # --name js-api             # set name of container
-    # microservice-js-api:1.0   # image name and tag
+    curl http://localhost/
+    # StatusCode        : 200
+    # StatusDescription : OK
+    # Content           : Hello, from 665839ec9f05 !
 
-    # run and expose python-api to port 8082
-    docker run -d -p 8082:3001 --name python-api microservice-python-api:1.0
+    curl http://localhost/health
+    # StatusCode        : 200
+    # StatusDescription : OK
+    # Content           : {"status":"healthy"}
+
+    curl http://localhost/info
+    # StatusCode        : 200
+    # StatusDescription : OK
+    # Content           : {"language":"js","version":"14.18.0","host":"665839ec9f05"}
+    ```
+
+### Python-API
+
+1. Explore the Python API directory.
+
+    ```bash
+    # change directory
+    cd python-api
+
+    # list and check the files within the Python API folder
+    ls
+    # index.py              - entrypoint of the code
+    # requirement.txt       - packages and dependencies
+    ```
+
+2. Use Dockerfile to build the Python-API container image.
+
+    ```bash
+    # build image
+    docker build -t python-api:v1 .
+
+    # list images to view the js-api image
+    docker image ls
+    # REPOSITORY                    TAG              IMAGE ID       CREATED         SIZE
+    # python-api                    v1               8fa5e48ba1bd   7 seconds ago    133MB
+    ```
+
+3. Run a Python API container using the image that just built.
+
+    ```bash
+    # run the Python API container
+    docker run -d -p 8080:3001 --name microservice-pythonapi python-api:v1
     # -d                            # detached mode
-    # -p 8082 :3001                 # mapping ports - local port:container port
-    # --name python-api             # set name of container
-    # microservice-python-api:1.0   # image name and tag
-    ```
+    # -p 8080:3001                  # mapping ports - local port:container port
+    # --name microservice-pythonapi # set name of container
+    # python-api:v1                 # image name and tag
 
-2. Run the webtool container and pass in two environment variables (JS_API_ENDPOINT and PYTHON_API_ENDPOINT).
-
-    ```bash
-    # run and expose webtool to port 80
-    # Provide values for the two environment variables.
-    docker run -d -p 80:3002 -e JS_API_ENDPOINT="http://host.docker.internal:8081/info" -e PYTHON_API_ENDPOINT="http://host.docker.internal:8082/info" --name js-web microservice-js-web:1.0
-    # -d                                                                # detached mode
-    # -p 80 :3002                                                       # mapping ports - local port:container port
-    # -e JS_API_ENDPOINT="http://host.docker.internal:8081/info"        # set a value for the JS API environment variable
-    # -e PYTHON_API_ENDPOINT="http://host.docker.internal:8082/info"    # set a value for the Python API environment variable
-    # --name js-web                                                     # set name of container
-    # microservice-js-web:1.0                                           # image name and tag
-
-    #check the running containers
+    # list running containers
     docker ps
-    # CONTAINER ID   IMAGE                         COMMAND                  CREATED              STATUS              PORTS                    NAMES
-    # c5654544ac5a   microservice-js-web:1.0       "docker-entrypoint.s…"   About a minute ago   Up About a minute   0.0.0.0:80->3002/tcp     js-web
-    # 821179a4dff1   microservice-python-api:1.0   "python index.py"        15 minutes ago       Up 15 minutes       0.0.0.0:8082->3001/tcp   python-api
-    # b4bb6c6f5420   microservice-js-api:1.0       "docker-entrypoint.s…"   17 minutes ago       Up 17 minutes       0.0.0.0:8081->3000/tcp   js-api
-    
+    # CONTAINER ID   IMAGE       COMMAND                  CREATED              STATUS              PORTS                  NAMES
+    # 40b0289189ab   python-api:v1   "python index.py"        59 seconds ago   Up 58 seconds   0.0.0.0:8080->3001/tcp   microservice-pythonapi
     ```
 
-3. Test and access the webtool through a web browser.
-### Webtool fetching data from the JS API
-
-![dockerinternal-result-js](screenshots/docker-internal-js.png)
-![dockerinternal-webresult-jsh](screenshots/docker-internal-webtool-checkjsapi.png)
-
-### Webtool fetching data from Python-api
-
-![dockerinternal-result-py](screenshots/docker-internal-python.png)
-![dockerinternal-webresult-py](screenshots/docker-internal-webtool-checkpyapi.png)
- 
-4. Lastly, you can check the logs of all the containers.
+4. Test and access the API via command line and browser.
 
     ```bash
-    # check logs for js-api
-    docker logs js-api
+    curl http://localhost:8080/
+    # StatusCode        : 200
+    # StatusDescription : OK
+    # Content           : Hello, 40b0289189ab!
 
-    # check logs for python-api
-    docker logs python-api
+    curl http://localhost:8080/health
+    # StatusCode        : 200
+    # StatusDescription : OK
+    # Content           : {
+                      "status": "healthy"
+                         }
 
-    # check logs for js-web
-    docker logs js-web
+    curl http://localhost:8080/info
+    # StatusCode        : 200
+    # StatusDescription : OK
+    # Content           : {
+                      "host": "40b0289189ab",
+                      "language": "python",
+                      "version": "3.9.9"
+                    }
     ```
-![dockerinternal-logs-result-js](screenshots/docker-internal-logs-js-api.png)
-![dockerinternal-logs-result-python](screenshots/docker-internal-logs-python-api.png)
-![dockerinternal-logs-result-webtool](screenshots/docker-internal-logs-js-web.png)
 
+### Web Front-end
 
-### Using Docker networks to link containers
+1. Explore the web-frontend directory.
+
+    ```bash
+    # change directory
+    cd web-front
+
+    # list and check the files within the Python API folder
+    ls
+    # public                - images that will be use
+    # view                  - front-end of webtool
+    # index.js              - entrypoint of the code
+    # .dockerignore         - used to exclude files and directories
+    # package.json          - nodejs metadata, includes libraries and other info
+    # package-lock.json     - other packages and dependencies
+    ```
+
+2. Use Dockerfile to build the web frontend container image.
+
+    ```bash
+    # build image
+    docker build -t web-frontend:v1 .
+
+    # list images to view the microservice-js-web image
+    docker image ls
+    # REPOSITORY                    TAG              IMAGE ID       CREATED             SIZE
+    # web-frontend                  v1               fe432cc06e16   9 minutes ago       175MB
+    ```
+
+3. Run a Web container using the image that just built.
+
+    ```bash
+    # run the Python API container
+    docker run -d -p 3002:3002 --name microservice-web web-frontend:v1
+    # -d                        # detached mode
+    # -p 3002:3002              # mapping ports - local port:container port
+    # --name microservice-web   # set name of container
+    # web-frontend:v1           # image name and tag
+
+    # list running containers
+    docker ps
+    # CONTAINER ID   IMAGE                     COMMAND                  CREATED          STATUS          PORTS                  NAMES
+    # 8efa4509992e   web-frontend:v1   "docker-entrypoint.s…"   59 seconds ago      Up 58 seconds      0.0.0.0:3002->3002/tcp   microservice-web
+    ```
+
+4. Test and access the API via command line and browser. 
+
+    ```bash
+    curl http://localhost:3002/
+    # StatusCode        : 200
+    # StatusDescription : OK
+    # Content           : <!DOCTYPE html>
+    ```
+
+### Container integration
 
 1. Make sure to remove all running containers.
 
@@ -147,39 +236,29 @@ Clean up the environment by stopping and removing running containers.
 
     ```bash
     # run the JS and Python APIs and attach them to the previously created network
-    docker run -d --network microservice-network --name js-api microservice-js-api:1.0
-    docker run -d --network microservice-network --name python-api microservice-python-api:1.0
+    docker run -d --network microservice-network --name js-api js-api:v1
+    docker run -d --network microservice-network --name python-api microservice-python-api:v1
     # verify the containers that were just created.
     docker ps
     # CONTAINER ID   IMAGE                         COMMAND                  CREATED          STATUS          PORTS      NAMES
-    # 532f056fb1d9   microservice-python-api:1.0   "python index.py"        2 seconds ago    Up 1 second     3001/tcp   python-api
-    # 532f056fb1d9   microservice-python-api:1.0   "python index.py"        2 seconds ago    Up 1 second     3001/tcp   python-api
+    # 532f056fb1d9   microservice-python-api:v.0   "python index.py"        2 seconds ago    Up 1 second     3001/tcp   python-api
+    # 532f056fb1d9   microservice-python-api:v.0   "python index.py"        2 seconds ago    Up 1 second     3001/tcp   python-api
     ```
 4. Run the webtool container and expose it to port 80 for web browser access. Pass in two environment variables (JS_API_ENDPOINT and PYTHON_API_ENDPOINT), using the container's name instead of localhost or host.docker.internal.
 
     ```bash
     # run the webtool container, attach it to the network, expose it on port 80, and use the names of the two API containers.
-    docker run -d -p 80:3002 --network microservice-network -e JS_API_ENDPOINT="http://js-api:3000/info" -e PYTHON_API_ENDPOINT="http://python-api:3001/info" --name js-web microservice-js-web:1.0
+    docker run -d -p 80:3002 --network microservice-network -e JS_API_ENDPOINT="http://js-api:3000/info" -e PYTHON_API_ENDPOINT="http://python-api:3001/info" --name js-web web-frontend:v1
     # verify the containers that were just created.
     docker ps
     # CONTAINER ID   IMAGE                         COMMAND                  CREATED         STATUS         PORTS                  NAMES
-    # 943569f4f06a   microservice-js-web:1.0       "docker-entrypoint.s…"   2 seconds ago   Up 1 second    0.0.0.0:80->3002/tcp   js-web
+    # 943569f4f06a   web-frontend:v1       "docker-entrypoint.s…"   2 seconds ago   Up 1 second    0.0.0.0:80->3002/tcp   js-web
     # 532f056fb1d9   microservice-python-api:1.0   "python index.py"        6 minutes ago   Up 6 minutes   3001/tcp               python-api
     # fc42b1836b45   microservice-js-api:1.0       "docker-entrypoint.s…"   7 minutes ago   Up 7 minutes   3000/tcp               js-api
 
     ```
 
-5. Test and access the webtool through a web browser.
-
-### Webtool fetching data from the JS API
-
-![dockernetwork-result-js](screenshots/docker-network-js.png)
-![dockernetwork-webresult-js](screenshots/docker-network-webtool-checkjsapi.png)
-
-### Webtool fetching data from Python-api
-
-![dockernetwork-result-python](screenshots/docker-network-python.png)
-![dockernetwork-webresult-python](screenshots/docker-network-webtool-checkpyapi.png)
+5. Test and access the webtool through a web browser using localhost.
 
 6. Lastly, you can check the logs of all the containers.
 
@@ -193,11 +272,7 @@ Clean up the environment by stopping and removing running containers.
     # check logs for js-web
     docker logs js-web
     ```
-![dockernetwork-logs-result-js](screenshots/docker-network-logs-jsapi.png)
-![dockernetwork-logs-result-python](screenshots/docker-network-logs-pythonapi.png)
-![dockernetwork-logs-result-webtool](screenshots/docker-network-logs-jsweb.png)
-
-
+    
 ---
 ### Key takeways
 

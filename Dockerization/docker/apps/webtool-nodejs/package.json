@@ -12,7 +12,7 @@
     "web",
     "containers"
   ],
-  "author": "Romar Cablao <rcablao@stratpoint.com>",
+  "author": "Your name <your email>",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.6",

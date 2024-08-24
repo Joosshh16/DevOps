@@ -7,7 +7,7 @@
     "start": "nodemon index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Romar Cablao <rcablao@stratpoint.com>",
+  "author": "Your Name <email>",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",

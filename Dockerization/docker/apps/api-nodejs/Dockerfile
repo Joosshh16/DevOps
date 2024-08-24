@@ -3,8 +3,8 @@ FROM node:14.18.0-slim
 # adding label
 LABEL name ="JS API"\
     description ="For backend API"\
-    authors="johnjosua.ong@stratpoint.com" \
-    company="Stratpoint Technologies"
+    authors="Email" \
+    company="Company"
 
 # setup app directory
 WORKDIR /usr/src/app
