@@ -1,5 +1,7 @@
 # Integrations
 
+![Minikube Architecture](architecture/Minikube-Architecture.png)
+
 1. You can use any hypervisor to run these containers in the cluster. In my case, I will use Minikube.
 
     ```bash
