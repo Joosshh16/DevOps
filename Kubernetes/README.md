@@ -4,13 +4,46 @@ This project utilizes a microservices architecture, deploying containerized appl
 # Project Directory
 Refer to this directory for guidance on container setup with manifest files.
 
-- [Config-json](./config-json) = for the container registry credentials
-- [Python-API](./docker/apps/python-api)
-- [Web-frontend](./docker/apps/web-front)
+- [Config](./config-json) = Stores container registry credentials.
+- [Secrets](./secrets) = contains sensitive information like container registry credentials, which are stored as part of the deployment.
+- [Configmaps](./configmaps) = used to define environment variables that are used in the frontend.
+- [Deployments](./deployments) = contains Kubernetes deployment manifests for deploying containers as Pods in the cluster.
+- [Services](./services) = defines Kubernetes services that expose applications to other Pods and to users.
+
+## Table of Contents
+* [Architecture and Functionalities](#architecture-and-funtionalities)
+* [Requirements](#requirements)
+
+
+## Architecture and Funtionalities
+
+### Project Overview
+
+After building and pushing your container image to a registry, you can deploy it to a Kubernetes cluster. For local testing, consider using Minikube.
+
+* Nodejs-API and Python-API - serve as backend services, providing data to the frontend application.
+* Web Frontend - the user interface will display information from the backend APIs, which is accessed through environment variables.
+
+![Minikube Architecture](architecture/Minikube-Architecture.png)
+
+As illustrated in the architecture diagram, the containerized images are deployed as Pods within the cluster. These Pods are grouped into namespaces for isolation. All Pods utilize NodePorts to enable external access through Services, facilitating communication between Pods and with end users. Access the web frontend at the NodePort of the web service (32005) to view the output of your microservices.
+
+## Requirements
+
+1. You can refer to the requirements of [previous project](./Dockerization) for initial setup. 
+
+2. For added setup you need to install minukube as local cluster in your device.
+
+
+
+
+
+
+
 
 # Integrations
 
-![Minikube Architecture](architecture/Minikube-Architecture.png)
+
 
 1. You can use any hypervisor to run these containers in the cluster. In my case, I will use Minikube.
 
