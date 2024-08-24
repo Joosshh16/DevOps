@@ -7,7 +7,7 @@ This project has containerized system designed to deliver a seamless user experi
 - [Web-frontend](./docker/apps/web-front)
 
 ## Table of Contents
-* Architecture and Functionalities
+* [Architecture and Functionalities](#architecture-and-functionalities)
 * [Requirements](#requirements)
 * [Setup](#setup)
     * [Nodejs-API](#nodejs-api)
@@ -18,7 +18,16 @@ This project has containerized system designed to deliver a seamless user experi
 
 ## Architecture and Functionalities
 
+Project Overview
+
+This project presents a multi-container application designed to provide a user-friendly web interface for accessing and visualizing backend data. The architecture consists of three primary components:
+
+* Nodejs-API and Python-API - serve as backend services, providing data to the frontend application.
+* Web Frontend - the user interface will display information from the backend APIs, which is accessed through environment variables.
+
 ![Docker Architecture](architecture/Docker-Architecture.png)
+
+As shown in the architecture diagram, the application consists of three containerized components: two APIs and a frontend. The APIs provide data that is accessed by the frontend as environment variables, allowing users to view backend information through the web interface.
 
 ## Requirements
 
