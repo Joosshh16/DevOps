@@ -8,13 +8,11 @@ This project has containerized system designed to deliver a seamless user experi
 
 ## Table of Contents
 * Architecture and Functionalities
-* Requirements
+* [Requirements](#requirements)
 * [Setup](#setup)
-Requirements
-setup
-    nodejs-api
-    python-api
-    web-frontend
+    * [Nodejs-API](#nodejs-api)
+    * [Python-API](#python-api)
+    * [Web-Front](#web-front-end)
     integration of containers
 
 ## Requirements
