@@ -2,9 +2,9 @@
 This project has containerized system designed to deliver a seamless user experience. APIs facilitate data flow between the backend applications and the frontend web interface.
 
 # Project Directory
-- [Nodejs-API] (./docker/apps/node-jsapi)
-- [Python-API] (./python-api)
-- [Web-frontend] (./web-front)
+- [Nodejs-API](./docker/apps/node-jsapi)
+- [Python-API](./docker/apps/python-api)
+- [Web-frontend](./docker/apps/web-front)
 
 -Table of contents
 Architecture
