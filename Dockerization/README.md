@@ -33,6 +33,7 @@ After installing Docker Desktop, Docker will be automatically available within t
     docker --version
     ```
 
+4. Follow the provided guide to set up and launch the containerized applications.
 
 ## Setup
 
