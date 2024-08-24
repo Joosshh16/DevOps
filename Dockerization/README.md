@@ -14,7 +14,7 @@ This project has containerized system designed to deliver a seamless user experi
     * [Python-API](#python-api)
     * [Web-Front](#web-front-end)
     * [Containers Integration](#container-integration)
-* [Key Takeways ann Conclusio](#key-takeways-and-conclusions)
+* [Key Takeways ann Conclusion](#key-takeways-and-conclusions)
 
 ## Architecture and Functionalities
 
