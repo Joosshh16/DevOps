@@ -25,7 +25,7 @@ This project presents a multi-container application designed to provide a user-f
 * Nodejs-API and Python-API - serve as backend services, providing data to the frontend application.
 * Web Frontend - the user interface will display information from the backend APIs, which is accessed through environment variables.
 
-![Docker Architecture](architecture/Docker-Architecture.png)
+![Docker Architecture](architecture/Docker-API-architecture.png)
 
 As shown in the architecture diagram, the application consists of three containerized components: two APIs and a frontend. The APIs provide data that is accessed by the frontend as environment variables, allowing users to view backend information through the web interface.
 
