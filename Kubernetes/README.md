@@ -4,7 +4,7 @@ This project utilizes a microservices architecture, deploying containerized appl
 # Project Directory
 Refer to this directory for guidance on container setup with manifest files.
 
-- [Config-json = for the container registry credentials](./config-json)
+- [Config-json](./config-json) = for the container registry credentials
 - [Python-API](./docker/apps/python-api)
 - [Web-frontend](./docker/apps/web-front)
 
