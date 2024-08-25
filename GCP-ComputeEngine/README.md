@@ -8,7 +8,7 @@ Refer to this directory for the sample source code.
 - [Simple web app](./Source-code)
 
 ## Table of Contents
-* [Architecture and Functionalities](#architecture-and-funtionalities)
+* [Architecture and Functionalities](#architecture-and-functionalities)
 * [Prerequisites](#prerequisites)
 * [GCP Deployment](#gcp-deployment)
 * [Key Takeaways and Conclusions](#key-takeways-and-conclusions)
