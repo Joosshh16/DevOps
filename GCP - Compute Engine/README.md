@@ -10,8 +10,8 @@ Refer to this directory for the sample source code.
 ## Table of Contents
 * [Architecture and Functionalities](#architecture-and-funtionalities)
 * [Prerequisites](#prerequisites)
-* GCP Deployment
-
+* [GCP Deployment](#gcp-deployment)
+* [Key Takeaways and Conclusions](#key-takeways-and-conclusions)
 
 ## Architecture and Functionalities
 
@@ -86,7 +86,37 @@ As shown in the architecture diagram, the application is deployed to Compute Eng
 
 ![Simple Webapp](architecture/Web.png)
 
+## Optional but recommended
 
+9. To establish a secure connection, we can deploy our application behind a load balancer using the frontend IP. This will prevent users from directly accessing the VM and route traffic through the load balancer instead.
+
+10. Stop the instance, edit its configuration, and remove the external IP. Save the changes and then restart the VM instance.
+
+11. Go to the instance group and select the Unmanaged Instance Group. This will group your VM instances and serve as the backend that the load balancer can access.
+
+12. After creating the instance group, go to Load Balancing and create an Application Load Balancer. Select the instance group as the target for the load balancer and also create a Health Check to monitor the health of the VMs.
+
+13. Finally, once the Load Balancer is fully provisioned, copy the frontend IP and test it in your web browser. This IP will serve as the frontend IP for your application, ensuring security and health through the use of the Load Balancer.
+
+---
+
+### Key takeways and Conclusions
+
+1. You can create a VM instance template as part of an instance group to enable autoscaling and ensure on-demand access for external users.
+
+2. Always remove the external IP associated with the VM to prevent direct access by external users.
+
+3. Load Balancers are essential for any application that needs to manage traffic to backend servers or applications.
+
+4. Health Checks are crucial for ensuring and controlling traffic and autoscaling features.
+
+5. You can use Cloud Armor as part of your application's Web Application Firewall (WAF) security. Refer to this link for [preconfigured firewall rules](https://cloud.google.com/armor/docs/waf-rules).
+
+6. When deploying your application to the cloud, carefully plan to improve fault tolerance and optimize services.
+
+7. Refer to industry best practices when deploying your application to any cloud platform. This will ensure optimal performance, security, and scalability, ultimately leading to a successful and reliable service.
+
+---
 
 
 
