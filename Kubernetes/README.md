@@ -14,7 +14,7 @@ Refer to this directory for guidance on container setup with manifest files.
 
 ## Table of Contents
 * [Architecture and Functionalities](#architecture-and-funtionalities)
-* [Requirements](#requirements)
+* [Prerequisites](#prerequisites)
 * [Microservices Deployment](#microservices-deployment)
 * [Cloud Deployment](#cloud-deployment)
 * [Key Takeaways and Conclusions](#key-takeways-and-conclusions)
@@ -32,7 +32,7 @@ After building and pushing your container image to a registry, you can deploy it
 
 As illustrated in the architecture diagram, the containerized images are deployed as Pods within the cluster. These Pods are grouped into namespaces for isolation. All Pods utilize NodePorts to enable external access through Services, facilitating communication between Pods and with end users. Access the web frontend at the NodePort of the web service (32005) to view the output of your microservices.
 
-## Requirements
+## Prerequisites
 
 1. You can refer to the requirements of [previous project](/Dockerization) for initial setup. 
 

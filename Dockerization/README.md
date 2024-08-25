@@ -8,7 +8,7 @@ This project has containerized system designed to deliver a seamless user experi
 
 ## Table of Contents
 * [Architecture and Functionalities](#architecture-and-functionalities)
-* [Requirements](#requirements)
+* [Prerequisites](#prerequisites
 * [Setup](#setup)
     * [Nodejs-API](#nodejs-api)
     * [Python-API](#python-api)
@@ -29,7 +29,7 @@ This project presents a multi-container application designed to provide a user-f
 
 As shown in the architecture diagram, the application consists of three containerized components: two APIs and a frontend. The APIs provide data that is accessed by the frontend as environment variables, allowing users to view backend information through the web interface.
 
-## Requirements
+## Prerequisites
 
 1. Download and install Docker Desktop or a compatible virtualization software to enable Dockerized applications.
 - [Docker Desktop](https://docs.docker.com/desktop/install/mac-install/)
