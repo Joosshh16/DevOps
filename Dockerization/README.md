@@ -8,7 +8,7 @@ This project has containerized system designed to deliver a seamless user experi
 
 ## Table of Contents
 * [Architecture and Functionalities](#architecture-and-functionalities)
-* [Prerequisites](#prerequisites
+* [Prerequisites](#prerequisites)
 * [Setup](#setup)
     * [Nodejs-API](#nodejs-api)
     * [Python-API](#python-api)
